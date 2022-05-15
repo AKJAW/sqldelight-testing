@@ -72,6 +72,7 @@ touchlab-stately = { module = "co.touchlab:stately-common", version = "1.2.1" }
 
 turbine = { module = "app.cash.turbine:turbine", version = "0.7.0" }
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+kotest-assertions = { module = "io.kotest:kotest-assertions-core", version = "5.2.3" }
 
 [plugins]
 gradleDependencyUpdate = "com.github.ben-manes.versions:0.42.0"
@@ -102,7 +103,8 @@ shared-commonTest = [
     "koin-test",
     "turbine",
     "coroutines-test",
-    "ktor-client-mock"
+    "ktor-client-mock",
+    "kotest-assertions",
 ]
 shared-androidTest = [
     "androidx-test-junit",

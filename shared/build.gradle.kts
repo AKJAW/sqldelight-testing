@@ -73,6 +73,7 @@ kotlin {
             dependencies {
                 implementation(libs.androidx.lifecycle.viewmodel)
                 implementation(libs.sqlDelight.android)
+                implementation(libs.sqlDelight.jvm)
                 implementation(libs.ktor.client.okHttp)
             }
         }

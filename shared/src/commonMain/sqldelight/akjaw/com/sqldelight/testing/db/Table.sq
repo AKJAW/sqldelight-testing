@@ -6,9 +6,9 @@ name TEXT NOT NULL UNIQUE
 selectAll:
 SELECT * FROM TimestampItem;
 
-insertBreed:
+insertItem:
 INSERT OR IGNORE INTO TimestampItem(name)
 VALUES (?);
 
-updateFavorite:
+updateTimestamp:
 UPDATE TimestampItem SET name = ? WHERE id = ?;
