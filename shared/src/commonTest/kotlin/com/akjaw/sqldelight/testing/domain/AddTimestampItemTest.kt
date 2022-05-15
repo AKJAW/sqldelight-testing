@@ -38,12 +38,20 @@ class AddTimestampItemTest : KoinComponent {
     }
 
     @Test
-    fun `The added item uses the current timestamp as the name`() {
+    fun `Added item uses the current timestamp as the name`() {
         mockTimestampProvider.timestamp = 123
 
         systemUnderTest.execute()
 
         val result = taskQueries.selectAll().executeAsList().first()
         result.name shouldBe "123"
+    }
+
+    @Test
+    fun `Added item has a version equal to 1`() {
+        systemUnderTest.execute()
+
+        val result = taskQueries.selectAll().executeAsList().first()
+        result.version shouldBe 1
     }
 }
