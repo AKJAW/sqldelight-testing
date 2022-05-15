@@ -1,11 +1,11 @@
 Pod::Spec.new do |spec|
     spec.name                     = 'shared'
-    spec.version                  = '1.2'
-    spec.homepage                 = 'https://github.com/touchlab/KaMPKit'
+    spec.version                  = '1.0'
+    spec.homepage                 = 'https://github.com/AKJAW/sqldelight-integration-tests'
     spec.source                   = { :http=> ''}
     spec.authors                  = ''
     spec.license                  = ''
-    spec.summary                  = 'Common library for the KaMP starter kit'
+    spec.summary                  = 'SQLDelight integration and UI testing'
     spec.vendored_frameworks      = 'build/cocoapods/framework/shared.framework'
     spec.libraries                = 'c++'
     spec.ios.deployment_target = '12.4'

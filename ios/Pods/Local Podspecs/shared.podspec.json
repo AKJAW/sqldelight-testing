@@ -1,13 +1,13 @@
 {
   "name": "shared",
-  "version": "1.2",
-  "homepage": "https://github.com/touchlab/KaMPKit",
+  "version": "1.0",
+  "homepage": "https://github.com/AKJAW/sqldelight-integration-tests",
   "source": {
     "http": ""
   },
   "authors": "",
   "license": "",
-  "summary": "Common library for the KaMP starter kit",
+  "summary": "SQLDelight integration and UI testing",
   "vendored_frameworks": "build/cocoapods/framework/shared.framework",
   "libraries": "c++",
   "platforms": {

@@ -1,0 +1,14 @@
+CREATE TABLE TimestampItem (
+id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+name TEXT NOT NULL UNIQUE
+);
+
+selectAll:
+SELECT * FROM TimestampItem;
+
+insertBreed:
+INSERT OR IGNORE INTO TimestampItem(name)
+VALUES (?);
+
+updateFavorite:
+UPDATE TimestampItem SET name = ? WHERE id = ?;

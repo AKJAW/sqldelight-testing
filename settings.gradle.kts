@@ -1,4 +1,4 @@
 include(":app", ":shared")
-rootProject.name = "KaMPKit"
+rootProject.name = "SQLDelightTesting"
 
 enableFeaturePreview("VERSION_CATALOGS")

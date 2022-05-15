@@ -13,7 +13,6 @@ android {
     defaultConfig {
         minSdk = libs.versions.minSdk.get().toInt()
         targetSdk = libs.versions.targetSdk.get().toInt()
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     testOptions {
         unitTests {
@@ -27,18 +26,7 @@ android {
     }
 }
 
-version = "1.2"
-
-android {
-    configurations {
-        create("androidTestApi")
-        create("androidTestDebugApi")
-        create("androidTestReleaseApi")
-        create("testApi")
-        create("testDebugApi")
-        create("testReleaseApi")
-    }
-}
+version = "1.0"
 
 kotlin {
     android()
@@ -114,8 +102,8 @@ kotlin {
         }
 
     cocoapods {
-        summary = "Common library for the KaMP starter kit"
-        homepage = "https://github.com/touchlab/KaMPKit"
+        summary = "SQLDelight integration and UI testing"
+        homepage = "https://github.com/AKJAW/sqldelight-integration-tests"
         framework {
             isStatic = false // SwiftUI preview requires dynamic framework
         }
@@ -125,7 +113,7 @@ kotlin {
 }
 
 sqldelight {
-    database("KaMPKitDb") {
-        packageName = "co.touchlab.kampkit.db"
+    database("AppDatabase") {
+        packageName = "com.akjaw.sqldelight.testing.db"
     }
 }
