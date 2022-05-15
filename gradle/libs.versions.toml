@@ -39,6 +39,7 @@ gradlePlugin-android = "com.android.tools.build:gradle:7.0.3"
 gradlePlugin-kotlinSerialization = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
 gradlePlugin-ktlint = { module = "org.jlleitschuh.gradle:ktlint-gradle", version = "10.2.1" }
 gradlePlugin-sqlDelight = { module = "com.squareup.sqldelight:gradle-plugin", version.ref = "sqlDelight" }
+gradlePlugin-nativecoroutines = { module = "com.rickclephas.kmp:kmp-nativecoroutines-gradle-plugin", version = "0.12.2-new-mm" }
 
 junit = { module = "junit:junit", version = "4.13.2" }
 
@@ -95,6 +96,7 @@ gradlePlugins = [
     "gradlePlugin-kotlinSerialization",
     "gradlePlugin-ktlint",
     "gradlePlugin-sqlDelight",
+    "gradlePlugin-nativecoroutines",
 ]
 ktor-common = ["ktor-client-core", "ktor-client-logging", "ktor-client-serialization", "ktor-client-contentNegotiation"]
 shared-commonTest = [
