@@ -13,7 +13,7 @@ import kotlin.test.Test
 
 class AddTimestampItemTest : KoinComponent {
 
-    private val taskQueries: TableQueries by inject()
+    private val tableQueries: TableQueries by inject()
     private val mockTimestampProvider: MockTimestampProvider by inject()
     private val systemUnderTest: AddTimestampItem by inject()
 
@@ -33,7 +33,7 @@ class AddTimestampItemTest : KoinComponent {
 
         systemUnderTest.execute()
 
-        val result = taskQueries.selectAll().executeAsList().first()
+        val result = tableQueries.selectAll().executeAsList().first()
         result.name shouldBe "123"
     }
 
@@ -41,7 +41,7 @@ class AddTimestampItemTest : KoinComponent {
     fun `Added item has a version equal to 1`() {
         systemUnderTest.execute()
 
-        val result = taskQueries.selectAll().executeAsList().first()
+        val result = tableQueries.selectAll().executeAsList().first()
         result.version shouldBe 1
     }
 }

@@ -5,6 +5,7 @@ import com.akjaw.sqldelight.testing.data.time.DateTimeTimestampProvider
 import com.akjaw.sqldelight.testing.data.time.TimestampProvider
 import com.akjaw.sqldelight.testing.db.AppDatabase
 import com.akjaw.sqldelight.testing.domain.AddTimestampItem
+import com.akjaw.sqldelight.testing.domain.UpdateTimestampItem
 import org.koin.core.KoinApplication
 import org.koin.core.context.startKoin
 import org.koin.core.module.Module
@@ -25,6 +26,7 @@ fun initKoin(appModule: Module): KoinApplication {
 val coreModule = module {
     factory<TimestampProvider> { DateTimeTimestampProvider() }
     factory { AddTimestampItem(get(), get()) }
+    factory { UpdateTimestampItem(get(), get()) }
     single<AppDatabase> {
         AppDatabase(get())
     }
