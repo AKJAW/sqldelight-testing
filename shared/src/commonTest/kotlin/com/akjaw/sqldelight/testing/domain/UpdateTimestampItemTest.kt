@@ -6,6 +6,7 @@ import com.akjaw.sqldelight.testing.MockTimestampProvider
 import com.akjaw.sqldelight.testing.startTestKoin
 import com.akjaw.sqldelight.testing.stopTestKoin
 import io.kotest.matchers.shouldBe
+import kotlinx.coroutines.test.runTest
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 import kotlin.test.AfterTest
@@ -29,7 +30,7 @@ class UpdateTimestampItemTest : KoinComponent {
     }
 
     @Test
-    fun `Updated task name is equal to the current timestamp`() {
+    fun `Updated task name is equal to the current timestamp`() = runTest {
         val insertedItem = insertItem("0")
         mockTimestampProvider.timestamp = 456
 
@@ -40,7 +41,7 @@ class UpdateTimestampItemTest : KoinComponent {
     }
 
     @Test
-    fun `Updated task version increases`() {
+    fun `Updated task version increases`() = runTest {
         val insertedItem = insertItem("0")
         mockTimestampProvider.timestamp = 456
 
