@@ -9,7 +9,7 @@ import com.squareup.sqldelight.runtime.coroutines.mapToList
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
-class GetTimestampItems(
+internal class GetTimestampItems(
     private val tableQueries: TableQueries,
 ) {
 
@@ -18,6 +18,6 @@ class GetTimestampItems(
             .asFlow()
             .mapToList()
             .map { items ->
-                items.map { TimestampItem(it.id, it.name, it.version.toInt()) }
+                items.map { TimestampItem(it.id, it.name, it.version) }
             }
 }

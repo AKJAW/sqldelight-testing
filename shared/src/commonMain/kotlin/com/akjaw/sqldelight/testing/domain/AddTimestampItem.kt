@@ -5,7 +5,7 @@ import com.akjaw.sqldelight.testing.data.time.TimestampProvider
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-class AddTimestampItem(
+internal class AddTimestampItem(
     private val tableQueries: TableQueries,
     private val timestampProvider: TimestampProvider,
 ) {
