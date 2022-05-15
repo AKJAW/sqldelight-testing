@@ -2,16 +2,11 @@ package com.akjaw.sqldelight.testing.domain
 
 import akjaw.com.sqldelight.testing.db.TableQueries
 import com.akjaw.sqldelight.testing.MockTimestampProvider
-import com.akjaw.sqldelight.testing.coreModule
-import com.akjaw.sqldelight.testing.data.database.createInMemorySqlDriver
-import com.akjaw.sqldelight.testing.testModule
-import com.squareup.sqldelight.db.SqlDriver
+import com.akjaw.sqldelight.testing.startTestKoin
+import com.akjaw.sqldelight.testing.stopTestKoin
+import io.kotest.matchers.shouldBe
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
-import org.koin.core.context.startKoin
-import org.koin.core.context.stopKoin
-import org.koin.dsl.module
-import io.kotest.matchers.shouldBe
 import kotlin.test.AfterTest
 import kotlin.test.BeforeTest
 import kotlin.test.Test
@@ -24,17 +19,12 @@ class AddTimestampItemTest : KoinComponent {
 
     @BeforeTest
     fun setUp() {
-        startKoin {
-            modules(
-                coreModule,
-                testModule,
-            )
-        }
+        startTestKoin()
     }
 
     @AfterTest
     fun tearDown() {
-        stopKoin()
+        stopTestKoin()
     }
 
     @Test
