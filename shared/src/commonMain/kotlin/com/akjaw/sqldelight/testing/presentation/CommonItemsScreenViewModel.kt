@@ -13,11 +13,11 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.stateIn
 
 class CommonItemsScreenViewModel internal constructor(
-    @NativeCoroutineScope
-    private val scope: CoroutineScope = CoroutineScope(SupervisorJob() + Dispatchers.Default),
     private val getTimestampItems: GetTimestampItems,
     private val addTimestampItem: AddTimestampItem,
     private val updateTimestampItem: UpdateTimestampItem,
+    @NativeCoroutineScope
+    private val scope: CoroutineScope = CoroutineScope(SupervisorJob() + Dispatchers.Default),
 ) {
 
     val items: StateFlow<List<TimestampItem>> = getTimestampItems

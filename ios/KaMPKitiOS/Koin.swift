@@ -19,3 +19,13 @@ private var _koin: Koin_coreKoin?
 var koin: Koin_coreKoin {
     return _koin!
 }
+
+// swiftlint:disable force_cast
+struct KoinWrapper {
+    static func get<T>(type: AnyClass) -> T {
+        koin.get(objCClass: type) as! T
+    }
+    static func get<T>(typeProtocol: Protocol) -> T {
+        koin.get(objCProtocol: typeProtocol) as! T
+    }
+}

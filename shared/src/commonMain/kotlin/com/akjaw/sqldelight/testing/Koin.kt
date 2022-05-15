@@ -30,7 +30,7 @@ val coreModule = module {
     factory { AddTimestampItem(get(), get()) }
     factory { UpdateTimestampItem(get(), get()) }
     factory { GetTimestampItems(get()) }
-    factory { CommonItemsScreenViewModel(get(), get(), get(), get()) }
+    factory { CommonItemsScreenViewModel(get(), get(), get()) }
     single<AppDatabase> {
         AppDatabase(get())
     }
