@@ -1,15 +1,15 @@
-CREATE TABLE TimestampItem (
+CREATE TABLE TimestampItemEntity (
 id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
 name TEXT NOT NULL,
 version INTEGER NOT NULL
 );
 
 selectAll:
-SELECT * FROM TimestampItem;
+SELECT * FROM TimestampItemEntity;
 
 insertItem:
-INSERT OR IGNORE INTO TimestampItem(name, version)
+INSERT OR IGNORE INTO TimestampItemEntity(name, version)
 VALUES (?, 1);
 
 updateTimestamp:
-UPDATE TimestampItem SET name = ?, version = version + 1 WHERE id = ?;
+UPDATE TimestampItemEntity SET name = ?, version = version + 1 WHERE id = ?;

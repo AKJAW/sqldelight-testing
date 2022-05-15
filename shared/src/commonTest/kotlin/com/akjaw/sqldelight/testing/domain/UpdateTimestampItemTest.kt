@@ -1,7 +1,7 @@
 package com.akjaw.sqldelight.testing.domain
 
 import akjaw.com.sqldelight.testing.db.TableQueries
-import akjaw.com.sqldelight.testing.db.TimestampItem
+import akjaw.com.sqldelight.testing.db.TimestampItemEntity
 import com.akjaw.sqldelight.testing.MockTimestampProvider
 import com.akjaw.sqldelight.testing.startTestKoin
 import com.akjaw.sqldelight.testing.stopTestKoin
@@ -50,11 +50,11 @@ class UpdateTimestampItemTest : KoinComponent {
         result.version shouldBe 2
     }
 
-    private fun insertItem(name: String): TimestampItem {
+    private fun insertItem(name: String): TimestampItemEntity {
         tableQueries.insertItem(name)
         return tableQueries.getItemWithName(name)
     }
 
-    private fun TableQueries.getItemWithName(name: String): TimestampItem =
+    private fun TableQueries.getItemWithName(name: String): TimestampItemEntity =
         selectAll().executeAsList().first { it.name == name }
 }
