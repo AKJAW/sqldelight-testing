@@ -12,7 +12,7 @@ internal class UpdateTimestampItem(
 
     suspend fun execute(itemId: Long) = withContext(Dispatchers.Default) {
         tableQueries.updateTimestamp(
-            name = timestampProvider.getTimestampSeconds().toString(),
+            name = timestampProvider.getTimestampMilliseconds().toString(),
             id = itemId
         )
     }

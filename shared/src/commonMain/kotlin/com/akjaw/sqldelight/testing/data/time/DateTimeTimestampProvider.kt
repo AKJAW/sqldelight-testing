@@ -4,5 +4,5 @@ import kotlinx.datetime.Clock
 
 internal class DateTimeTimestampProvider : TimestampProvider {
 
-    override fun getTimestampSeconds(): Long = Clock.System.now().epochSeconds
+    override fun getTimestampMilliseconds(): Long = Clock.System.now().toEpochMilliseconds()
 }

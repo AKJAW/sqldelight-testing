@@ -11,6 +11,6 @@ internal class AddTimestampItem(
 ) {
 
     suspend fun execute() = withContext(Dispatchers.Default) {
-        tableQueries.insertItem(timestampProvider.getTimestampSeconds().toString())
+        tableQueries.insertItem(timestampProvider.getTimestampMilliseconds().toString())
     }
 }
