@@ -25,22 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         startKoin()
     
-        createPublisher(for: viewModel.itemsNative).sink { completion in
-            print("Received completion: \(completion)")
-        } receiveValue: { value in
-            print("Received value: \(value)")
-        }
-            .store(in: &cancellables)
-
-        let viewController = UIHostingController(rootView: Text("Initial").onTapGesture {
-            createFuture(for: self.viewModel.addItemNative())
-                .sink { completion in
-                print("Received completion: \(completion)")
-            } receiveValue: { value in
-                print("Received value: \(value)")
-            }
-            .store(in: &self.cancellables)
-         })
+        let viewController = UIHostingController(rootView: MainScreen())
 
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = viewController
