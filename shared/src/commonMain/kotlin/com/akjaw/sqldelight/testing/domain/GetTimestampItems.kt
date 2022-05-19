@@ -18,6 +18,6 @@ internal class GetTimestampItems(
             .asFlow()
             .mapToList()
             .map { items ->
-                items.map { TimestampItem(it.id, it.name, it.version) }
+                items.map { TimestampItem(it.id, it.time.toString(), it.version) }
             }
 }

@@ -35,7 +35,7 @@ class AddTimestampItemTest : KoinComponent {
         systemUnderTest.execute()
 
         val result = tableQueries.selectAll().executeAsList().first()
-        result.name shouldBe "123"
+        result.time shouldBe 123
     }
 
     @Test

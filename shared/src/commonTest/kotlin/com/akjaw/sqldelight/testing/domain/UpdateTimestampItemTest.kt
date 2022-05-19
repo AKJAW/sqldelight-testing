@@ -31,18 +31,18 @@ class UpdateTimestampItemTest : KoinComponent {
 
     @Test
     fun `Updated task name is equal to the current timestamp`() = runTest {
-        val insertedItem = insertItem("0")
+        val insertedItem = insertItem(0)
         mockTimestampProvider.timestamp = 456
 
         systemUnderTest.execute(insertedItem.id)
 
         val result = tableQueries.selectAll().executeAsList().first()
-        result.name shouldBe "456"
+        result.time shouldBe 456
     }
 
     @Test
     fun `Updated task version increases`() = runTest {
-        val insertedItem = insertItem("0")
+        val insertedItem = insertItem(0)
         mockTimestampProvider.timestamp = 456
 
         systemUnderTest.execute(insertedItem.id)
@@ -51,11 +51,11 @@ class UpdateTimestampItemTest : KoinComponent {
         result.version shouldBe 2
     }
 
-    private fun insertItem(name: String): TimestampItemEntity {
-        tableQueries.insertItem(name)
-        return tableQueries.getItemWithName(name)
+    private fun insertItem(time: Long): TimestampItemEntity {
+        tableQueries.insertItem(time)
+        return tableQueries.getItemWithName(time)
     }
 
-    private fun TableQueries.getItemWithName(name: String): TimestampItemEntity =
-        selectAll().executeAsList().first { it.name == name }
+    private fun TableQueries.getItemWithName(time: Long): TimestampItemEntity =
+        selectAll().executeAsList().first { it.time == time }
 }

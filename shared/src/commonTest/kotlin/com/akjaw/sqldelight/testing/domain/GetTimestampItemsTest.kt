@@ -32,8 +32,8 @@ class GetTimestampItemsTest : KoinComponent {
 
     @Test
     fun `Items are correctly returned`() = runTest {
-        tableQueries.insertItem("1")
-        tableQueries.insertItem("2")
+        tableQueries.insertItem(1)
+        tableQueries.insertItem(2)
 
         val result = systemUnderTest.execute()
 
