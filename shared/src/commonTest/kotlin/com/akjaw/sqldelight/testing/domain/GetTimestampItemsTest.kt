@@ -6,8 +6,10 @@ import app.cash.turbine.test
 import com.akjaw.sqldelight.testing.MockTimestampProvider
 import com.akjaw.sqldelight.testing.startTestKoin
 import com.akjaw.sqldelight.testing.stopTestKoin
+import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.shouldBe
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.test.runTest
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
@@ -32,16 +34,15 @@ class GetTimestampItemsTest : KoinComponent {
 
     @Test
     fun `Items are correctly returned`() = runTest {
-        tableQueries.insertItem(1)
-        tableQueries.insertItem(2)
+        tableQueries.insertItem(1652980264000)
+        tableQueries.insertItem(1652980224000)
 
-        val result = systemUnderTest.execute()
+        val result = systemUnderTest.execute().first()
 
-        result.test {
-            val items = awaitItem()
-            items shouldHaveSize 2
-            items[0].name shouldBe "1"
-            items[1].name shouldBe "2"
+        assertSoftly {
+            result shouldHaveSize 2
+            result[0].name shouldBe "2022-05-19T17:11:04"
+            result[1].name shouldBe "2022-05-19T17:10:24"
         }
     }
 }
