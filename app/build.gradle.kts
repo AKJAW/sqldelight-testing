@@ -61,4 +61,8 @@ dependencies {
     implementation(libs.koin.android)
     implementation(libs.koin.compose)
     testImplementation(libs.junit)
+
+    androidTestImplementation(libs.bundles.app.ui.test)
+    androidTestImplementation(libs.sqlDelight.jvm)
+    androidTestImplementation(libs.sqlDelight.android)
 }
