@@ -23,6 +23,8 @@ androidx-lifecycle-runtime = { module = "androidx.lifecycle:lifecycle-runtime-kt
 androidx-lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
 androidx-test-junit = { module = "androidx.test.ext:junit-ktx", version = "1.1.3" }
 
+androidx-compose-ui-junit = { module = "androidx.compose.ui:ui-test-junit4", version = "1.1.1" }
+
 compose-compiler = { module = "androidx.compose.compiler:compiler", version.ref = "composeCompiler" }
 compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
 compose-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
@@ -91,6 +93,10 @@ app-ui = [
     "compose-material",
     "compose-activity",
     "google-accompanist-swipeRefresh"
+]
+app-ui-test = [
+    "androidx-test-junit",
+    "androidx-compose-ui-junit",
 ]
 gradlePlugins = [
     "gradlePlugin-android",

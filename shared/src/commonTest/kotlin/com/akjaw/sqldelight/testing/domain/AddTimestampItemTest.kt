@@ -1,9 +1,9 @@
 package com.akjaw.sqldelight.testing.domain
 
 import akjaw.com.sqldelight.testing.db.TableQueries
-import com.akjaw.sqldelight.testing.MockTimestampProvider
-import com.akjaw.sqldelight.testing.startTestKoin
-import com.akjaw.sqldelight.testing.stopTestKoin
+import com.akjaw.sqldelight.testing.test.MockTimestampProvider
+import com.akjaw.sqldelight.testing.test.startTestKoin
+import com.akjaw.sqldelight.testing.test.stopTestKoin
 import io.kotest.matchers.shouldBe
 import kotlinx.coroutines.test.runTest
 import org.koin.core.component.KoinComponent

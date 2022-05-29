@@ -1,4 +1,4 @@
-package com.akjaw.sqldelight.testing.data.database
+package com.akjaw.sqldelight.testing.test
 
 import co.touchlab.sqliter.DatabaseConfiguration
 import com.akjaw.sqldelight.testing.db.AppDatabase

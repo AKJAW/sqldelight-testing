@@ -1,4 +1,4 @@
-package com.akjaw.sqldelight.testing
+package com.akjaw.sqldelight.testing.test
 
 import com.akjaw.sqldelight.testing.data.time.TimestampProvider
 

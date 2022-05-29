@@ -1,6 +1,6 @@
-package com.akjaw.sqldelight.testing
+package com.akjaw.sqldelight.testing.test
 
-import com.akjaw.sqldelight.testing.data.database.createInMemorySqlDriver
+import com.akjaw.sqldelight.testing.coreModule
 import com.akjaw.sqldelight.testing.data.time.TimestampProvider
 import com.squareup.sqldelight.db.SqlDriver
 import org.koin.core.context.startKoin

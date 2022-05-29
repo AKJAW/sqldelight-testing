@@ -16,7 +16,7 @@ buildscript {
     }
 }
 
-// https://youtrack.jetbrains.com/issue/KTIJ-19369
+    // https://youtrack.jetbrains.com/issue/KTIJ-19369
 @Suppress("DSL_SCOPE_VIOLATION")
 plugins {
     alias(libs.plugins.gradleDependencyUpdate)
@@ -37,12 +37,6 @@ subprojects {
         verbose.set(true)
         filter {
             exclude { it.file.path.contains("build/") }
-        }
-    }
-
-    afterEvaluate {
-        tasks.named("check").configure {
-            dependsOn(tasks.getByName("ktlintCheck"))
         }
     }
 }

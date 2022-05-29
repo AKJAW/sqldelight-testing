@@ -1,11 +1,8 @@
 package com.akjaw.sqldelight.testing.domain
 
 import akjaw.com.sqldelight.testing.db.TableQueries
-import akjaw.com.sqldelight.testing.db.TimestampItemEntity
-import app.cash.turbine.test
-import com.akjaw.sqldelight.testing.MockTimestampProvider
-import com.akjaw.sqldelight.testing.startTestKoin
-import com.akjaw.sqldelight.testing.stopTestKoin
+import com.akjaw.sqldelight.testing.test.startTestKoin
+import com.akjaw.sqldelight.testing.test.stopTestKoin
 import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.shouldBe

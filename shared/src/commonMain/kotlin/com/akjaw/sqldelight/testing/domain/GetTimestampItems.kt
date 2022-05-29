@@ -1,16 +1,11 @@
 package com.akjaw.sqldelight.testing.domain
 
 import akjaw.com.sqldelight.testing.db.TableQueries
-import akjaw.com.sqldelight.testing.db.TimestampItemEntity
-import com.akjaw.sqldelight.testing.data.time.TimestampProvider
-import com.squareup.sqldelight.Query
 import com.squareup.sqldelight.runtime.coroutines.asFlow
 import com.squareup.sqldelight.runtime.coroutines.mapToList
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
-import kotlinx.datetime.DateTimePeriod
 import kotlinx.datetime.Instant
-import kotlinx.datetime.LocalDateTime
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.toLocalDateTime
 
