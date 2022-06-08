@@ -20,7 +20,7 @@
 			isa = PBXAggregateTarget;
 			buildConfigurationList = 46EB2E000001A0 /* Build configuration list for PBXAggregateTarget "shared" */;
 			buildPhases = (
-				46EB2E00000380 /* [CP-User] Build shared */,
+				46EB2E000004E0 /* [CP-User] Build shared */,
 			);
 			dependencies = (
 			);
@@ -32,17 +32,27 @@
 		46EB2E000002B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E000002A0 /* Foundation.framework */; };
 		46EB2E00000320 /* Pods-KaMPKitiOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00000310 /* Pods-KaMPKitiOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		46EB2E00000370 /* Pods-KaMPKitiOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000360 /* Pods-KaMPKitiOS-dummy.m */; };
+		46EB2E00000410 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E000002A0 /* Foundation.framework */; };
+		46EB2E00000480 /* Pods-KaMPKitiOSUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00000470 /* Pods-KaMPKitiOSUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46EB2E000004D0 /* Pods-KaMPKitiOSUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000004C0 /* Pods-KaMPKitiOSUITests-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		46EB2E00000390 /* PBXContainerItemProxy */ = {
+		46EB2E000004F0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 52B60EC2A583F24ACBB69C113F5488B9;
 			remoteInfo = SwiftLint;
 		};
-		46EB2E000003B0 /* PBXContainerItemProxy */ = {
+		46EB2E00000510 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46EB2E00000000 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8777C9F6889E59EFFD631D80AEE9048B;
+			remoteInfo = shared;
+		};
+		46EB2E00000530 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
@@ -69,7 +79,17 @@
 		46EB2E00000340 /* Pods-KaMPKitiOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KaMPKitiOS-acknowledgements.plist"; sourceTree = "<group>"; };
 		46EB2E00000350 /* Pods-KaMPKitiOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KaMPKitiOS-acknowledgements.markdown"; sourceTree = "<group>"; };
 		46EB2E00000360 /* Pods-KaMPKitiOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KaMPKitiOS-dummy.m"; sourceTree = "<group>"; };
+		46EB2E00000430 /* Pods-KaMPKitiOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KaMPKitiOSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		46EB2E00000440 /* Pods-KaMPKitiOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KaMPKitiOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		46EB2E00000450 /* Pods-KaMPKitiOSUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KaMPKitiOSUITests-Info.plist"; sourceTree = "<group>"; };
+		46EB2E00000460 /* Pods-KaMPKitiOSUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-KaMPKitiOSUITests.modulemap"; sourceTree = "<group>"; };
+		46EB2E00000470 /* Pods-KaMPKitiOSUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KaMPKitiOSUITests-umbrella.h"; sourceTree = "<group>"; };
+		46EB2E00000490 /* Pods-KaMPKitiOSUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KaMPKitiOSUITests-frameworks.sh"; sourceTree = "<group>"; };
+		46EB2E000004A0 /* Pods-KaMPKitiOSUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KaMPKitiOSUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		46EB2E000004B0 /* Pods-KaMPKitiOSUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KaMPKitiOSUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		46EB2E000004C0 /* Pods-KaMPKitiOSUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KaMPKitiOSUITests-dummy.m"; sourceTree = "<group>"; };
 		4EDB9C40CD3583B30579DB2BE865F1D3 /* Pods-KaMPKitiOS */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-KaMPKitiOS"; path = Pods_KaMPKitiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDF36D6DB1926BCC43DC5A32193FFF44 /* Pods-KaMPKitiOSUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-KaMPKitiOSUITests"; path = Pods_KaMPKitiOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +98,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				46EB2E000002B0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46EB2E000003F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46EB2E00000410 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				4EDB9C40CD3583B30579DB2BE865F1D3 /* Pods-KaMPKitiOS */,
+				EDF36D6DB1926BCC43DC5A32193FFF44 /* Pods-KaMPKitiOSUITests */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				46EB2E000002C0 /* Pods-KaMPKitiOS */,
+				46EB2E00000420 /* Pods-KaMPKitiOSUITests */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
@@ -217,6 +247,23 @@
 			path = "Target Support Files/Pods-KaMPKitiOS";
 			sourceTree = "<group>";
 		};
+		46EB2E00000420 /* Pods-KaMPKitiOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				46EB2E00000460 /* Pods-KaMPKitiOSUITests.modulemap */,
+				46EB2E000004B0 /* Pods-KaMPKitiOSUITests-acknowledgements.markdown */,
+				46EB2E000004A0 /* Pods-KaMPKitiOSUITests-acknowledgements.plist */,
+				46EB2E000004C0 /* Pods-KaMPKitiOSUITests-dummy.m */,
+				46EB2E00000490 /* Pods-KaMPKitiOSUITests-frameworks.sh */,
+				46EB2E00000450 /* Pods-KaMPKitiOSUITests-Info.plist */,
+				46EB2E00000470 /* Pods-KaMPKitiOSUITests-umbrella.h */,
+				46EB2E00000440 /* Pods-KaMPKitiOSUITests.debug.xcconfig */,
+				46EB2E00000430 /* Pods-KaMPKitiOSUITests.release.xcconfig */,
+			);
+			name = "Pods-KaMPKitiOSUITests";
+			path = "Target Support Files/Pods-KaMPKitiOSUITests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -228,9 +275,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		46EB2E000003D0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46EB2E00000480 /* Pods-KaMPKitiOSUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		DC57A726D73BD07D67F82A4BB352EA82 /* Pods-KaMPKitiOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46EB2E00000390 /* Build configuration list for PBXNativeTarget "Pods-KaMPKitiOSUITests" */;
+			buildPhases = (
+				46EB2E000003D0 /* Headers */,
+				46EB2E000003E0 /* Sources */,
+				46EB2E000003F0 /* Frameworks */,
+				46EB2E00000400 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				46EB2E00000540 /* PBXTargetDependency */,
+			);
+			name = "Pods-KaMPKitiOSUITests";
+			productName = Pods_KaMPKitiOSUITests;
+			productReference = EDF36D6DB1926BCC43DC5A32193FFF44 /* Pods-KaMPKitiOSUITests */;
+			productType = "com.apple.product-type.framework";
+		};
 		FA6E46E8E7462D72AFBDCEA698D24977 /* Pods-KaMPKitiOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46EB2E00000210 /* Build configuration list for PBXNativeTarget "Pods-KaMPKitiOS" */;
@@ -243,8 +317,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				46EB2E000003A0 /* PBXTargetDependency */,
-				46EB2E000003C0 /* PBXTargetDependency */,
+				46EB2E00000500 /* PBXTargetDependency */,
+				46EB2E00000520 /* PBXTargetDependency */,
 			);
 			name = "Pods-KaMPKitiOS";
 			productName = Pods_KaMPKitiOS;
@@ -274,6 +348,7 @@
 			projectRoot = "";
 			targets = (
 				FA6E46E8E7462D72AFBDCEA698D24977 /* Pods-KaMPKitiOS */,
+				DC57A726D73BD07D67F82A4BB352EA82 /* Pods-KaMPKitiOSUITests */,
 				8777C9F6889E59EFFD631D80AEE9048B /* shared */,
 				52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */,
 			);
@@ -288,10 +363,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		46EB2E00000400 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		46EB2E00000380 /* [CP-User] Build shared */ = {
+		46EB2E000004E0 /* [CP-User] Build shared */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -312,20 +394,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		46EB2E000003E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46EB2E000004D0 /* Pods-KaMPKitiOSUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		46EB2E000003A0 /* PBXTargetDependency */ = {
+		46EB2E00000500 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftLint;
 			target = 52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */;
-			targetProxy = 46EB2E00000390 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E000004F0 /* PBXContainerItemProxy */;
 		};
-		46EB2E000003C0 /* PBXTargetDependency */ = {
+		46EB2E00000520 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = shared;
 			target = 8777C9F6889E59EFFD631D80AEE9048B /* shared */;
-			targetProxy = 46EB2E000003B0 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E00000510 /* PBXContainerItemProxy */;
+		};
+		46EB2E00000540 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = shared;
+			target = 8777C9F6889E59EFFD631D80AEE9048B /* shared */;
+			targetProxy = 46EB2E00000530 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -601,6 +697,81 @@
 			};
 			name = Debug;
 		};
+		46EB2E000003A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46EB2E00000430 /* Pods-KaMPKitiOSUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-KaMPKitiOSUITests/Pods-KaMPKitiOSUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KaMPKitiOSUITests/Pods-KaMPKitiOSUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		46EB2E000003B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46EB2E00000440 /* Pods-KaMPKitiOSUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-KaMPKitiOSUITests/Pods-KaMPKitiOSUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KaMPKitiOSUITests/Pods-KaMPKitiOSUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -636,6 +807,15 @@
 			buildConfigurations = (
 				46EB2E00000230 /* Debug */,
 				46EB2E00000220 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46EB2E00000390 /* Build configuration list for PBXNativeTarget "Pods-KaMPKitiOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46EB2E000003B0 /* Debug */,
+				46EB2E000003A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

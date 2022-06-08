@@ -24,6 +24,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         startKoin()
+        
+        #if DEBUG
+        if CommandLine.arguments.contains("enable-testing") {
+            SetUpKoinForTestingKt.setUpKoinForTesting()
+            let mockTimeString = UserDefaults.standard.string(forKey: "mock-time")
+            let mockTime = Int64(mockTimeString!)!
+            print(mockTime)
+            if mockTime != 0 {
+                TestDoubleRetriever.shared.mockTimestampProvider.timestamp = Int64(mockTime)
+
+            }
+        }
+        #endif
     
         let viewController = UIHostingController(rootView: MainScreen())
 
