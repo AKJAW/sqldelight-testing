@@ -3,7 +3,16 @@ package com.akjaw.sqldelight.testing.test
 import com.akjaw.sqldelight.testing.data.time.TimestampProvider
 
 class MockTimestampProvider : TimestampProvider {
-    var timestamp: Long = 0
+    private var timestampValues: MutableList<Long> = mutableListOf()
+    private var lastValue: Long = 0
 
-    override fun getTimestampMilliseconds(): Long = timestamp
+    fun setNextTimestamp(value: Long) {
+        timestampValues.add(value)
+    }
+
+    override fun getTimestampMilliseconds(): Long {
+        lastValue = timestampValues.firstOrNull() ?: lastValue
+        timestampValues.removeFirstOrNull()
+        return lastValue
+    }
 }

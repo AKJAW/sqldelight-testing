@@ -32,7 +32,7 @@ class UpdateTimestampItemTest : KoinComponent {
     @Test
     fun `Updated task name is equal to the current timestamp`() = runTest {
         val insertedItem = insertItem(0)
-        mockTimestampProvider.timestamp = 456
+        mockTimestampProvider.setNextTimestamp(456)
 
         systemUnderTest.execute(insertedItem.id)
 
@@ -43,7 +43,7 @@ class UpdateTimestampItemTest : KoinComponent {
     @Test
     fun `Updated task version increases`() = runTest {
         val insertedItem = insertItem(0)
-        mockTimestampProvider.timestamp = 456
+        mockTimestampProvider.setNextTimestamp(456)
 
         systemUnderTest.execute(insertedItem.id)
 

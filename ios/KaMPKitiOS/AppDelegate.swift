@@ -28,13 +28,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         #if DEBUG
         if CommandLine.arguments.contains("enable-testing") {
             SetUpKoinForTestingKt.setUpKoinForTesting()
-            let mockTimeString = UserDefaults.standard.string(forKey: "mock-time")
-            let mockTime = Int64(mockTimeString!)!
-            print(mockTime)
-            if mockTime != 0 {
-                TestDoubleRetriever.shared.mockTimestampProvider.timestamp = Int64(mockTime)
-
-            }
+            UserDefaults.standard.string(forKey: "mock-time")?
+                .split(separator: ",")
+                .map { timeString in
+                    Int64(timeString)
+                }
+                .compactMap { $0 }
+                .forEach { time in
+                    TestDoubleRetriever.shared.mockTimestampProvider.setNextTimestamp(value: time)
+                }
         }
         #endif
     

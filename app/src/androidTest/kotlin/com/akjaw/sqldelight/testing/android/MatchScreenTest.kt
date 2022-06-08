@@ -1,6 +1,7 @@
 package com.akjaw.sqldelight.testing.android
 
 import androidx.compose.ui.test.assertIsDisplayed
+import androidx.compose.ui.test.junit4.ComposeTestRule
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
@@ -49,21 +50,35 @@ class MatchScreenTest : KoinComponent {
 
     @Test
     fun addingAnItemPopulatesTheListWithCurrentTimestamp() {
-        mockTimestampProvider.timestamp = 1653823433000
+        mockTimestampProvider.setNextTimestamp(1653823433000)
 
         composeTestRule.onNodeWithText("Add").performClick()
 
-        composeTestRule.onNodeWithText("2022-05-29T11:23:53").assertIsDisplayed()
+        composeTestRule.waitUntilCatching(1000) {
+            composeTestRule.onNodeWithText("2022-05-29T11:23:53").assertIsDisplayed()
+        }
     }
 
     @Test
     fun refreshingAnItemUpdatesTheNameWithCurrentTimestamp() {
-        mockTimestampProvider.timestamp = 0
+        mockTimestampProvider.setNextTimestamp(0)
         composeTestRule.onNodeWithText("Add").performClick()
-        mockTimestampProvider.timestamp = 1653823433000
+        mockTimestampProvider.setNextTimestamp(1653823433000)
 
         composeTestRule.onNodeWithContentDescription("Refresh").performClick()
 
-        composeTestRule.onNodeWithText("2022-05-29T11:23:53").assertIsDisplayed()
+        composeTestRule.waitUntilCatching(1000) {
+            composeTestRule.onNodeWithText("2022-05-29T11:23:53").assertIsDisplayed()
+        }
     }
+
+    private fun ComposeTestRule.waitUntilCatching(timeoutMillis: Long, assertion: () -> Unit) =
+        waitUntil(timeoutMillis) {
+            try {
+                assertion()
+                true
+            } catch (e: Exception) {
+                false
+            }
+        }
 }

@@ -30,7 +30,7 @@ class AddTimestampItemTest : KoinComponent {
 
     @Test
     fun `Added item uses the current timestamp as the name`() = runTest {
-        mockTimestampProvider.timestamp = 123
+        mockTimestampProvider.setNextTimestamp(123)
 
         systemUnderTest.execute()
 
