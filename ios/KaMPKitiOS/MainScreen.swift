@@ -56,13 +56,19 @@ struct MainScreen: View {
                 HStack {
                     Text(item.name)
                     Spacer()
-                    Image(systemName: "arrow.clockwise")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 20, height: 20)
-                        .onTapGesture {
-                            publisher.updateItem(id: item.id)
-                        }
+                    Button(
+                        action: { publisher.updateItem(id: item.id) }
+                    ) {
+                        Image(systemName: "arrow.clockwise")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 20, height: 20)
+                            .onTapGesture {
+                                publisher.updateItem(id: item.id)
+                            }
+                    }
+                    .accessibility(label: Text("Refresh"))
+                    .accessibility(identifier: "Refresh")
                 }
             }
             HStack {
