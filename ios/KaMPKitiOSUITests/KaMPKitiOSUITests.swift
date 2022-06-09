@@ -1,5 +1,4 @@
 import XCTest
-import shared
 import KaMPKitiOS
 
 class KaMPKitiOSUITests: XCTestCase {

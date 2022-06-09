@@ -13,7 +13,6 @@
 		AE74C67C28319122004715A7 /* KMPNativeCoroutinesCombine in Frameworks */ = {isa = PBXBuildFile; productRef = AE74C67B28319122004715A7 /* KMPNativeCoroutinesCombine */; };
 		AE74C67E28319122004715A7 /* KMPNativeCoroutinesCore in Frameworks */ = {isa = PBXBuildFile; productRef = AE74C67D28319122004715A7 /* KMPNativeCoroutinesCore */; };
 		AEB8BF272836A72D00DD6CCC /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB8BF262836A72D00DD6CCC /* MainScreen.swift */; };
-		C280B0C0266864A766BF98DC /* Pods_KaMPKitiOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B34E88D7B1E5AA367EED8F7 /* Pods_KaMPKitiOSUITests.framework */; };
 		F1465F0123AA94BF0055F7C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1465F0023AA94BF0055F7C3 /* AppDelegate.swift */; };
 		F1465F0A23AA94BF0055F7C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1465F0923AA94BF0055F7C3 /* Assets.xcassets */; };
 		F1465F0D23AA94BF0055F7C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1465F0B23AA94BF0055F7C3 /* LaunchScreen.storyboard */; };
@@ -41,11 +40,8 @@
 /* Begin PBXFileReference section */
 		1DFCC00C8DAA719770A18D1A /* Pods-KaMPKitiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaMPKitiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-KaMPKitiOS/Pods-KaMPKitiOS.release.xcconfig"; sourceTree = "<group>"; };
 		2A1ED6A4A2A53F5F75C58E5F /* Pods-KaMPKitiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaMPKitiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-KaMPKitiOS/Pods-KaMPKitiOS.release.xcconfig"; sourceTree = "<group>"; };
-		2B34E88D7B1E5AA367EED8F7 /* Pods_KaMPKitiOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KaMPKitiOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3958619F85EEE0B5FF68C282 /* Pods-KaMPKitiOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaMPKitiOSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KaMPKitiOSUITests/Pods-KaMPKitiOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		46A5B60726B04920002EFEAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		46B5284C249C5CF400A7725D /* Koin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Koin.swift; sourceTree = "<group>"; };
-		7836A8E27DBFE941C323F3A0 /* Pods-KaMPKitiOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaMPKitiOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KaMPKitiOSUITests/Pods-KaMPKitiOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AEB8BF262836A72D00DD6CCC /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		B859F3FB23133D22AB9DD835 /* Pods_KaMPKitiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KaMPKitiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED1F782AF3705197012D0C33 /* Pods-KaMPKitiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaMPKitiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KaMPKitiOS/Pods-KaMPKitiOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -85,7 +81,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C280B0C0266864A766BF98DC /* Pods_KaMPKitiOSUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				B859F3FB23133D22AB9DD835 /* Pods_KaMPKitiOS.framework */,
-				2B34E88D7B1E5AA367EED8F7 /* Pods_KaMPKitiOSUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -108,8 +102,6 @@
 				1DFCC00C8DAA719770A18D1A /* Pods-KaMPKitiOS.release.xcconfig */,
 				ED1F782AF3705197012D0C33 /* Pods-KaMPKitiOS.debug.xcconfig */,
 				2A1ED6A4A2A53F5F75C58E5F /* Pods-KaMPKitiOS.release.xcconfig */,
-				3958619F85EEE0B5FF68C282 /* Pods-KaMPKitiOSUITests.debug.xcconfig */,
-				7836A8E27DBFE941C323F3A0 /* Pods-KaMPKitiOSUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -217,11 +209,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F1465F2D23AA94C00055F7C3 /* Build configuration list for PBXNativeTarget "KaMPKitiOSUITests" */;
 			buildPhases = (
-				3A87E0D479A3EE13C560DF35 /* [CP] Check Pods Manifest.lock */,
 				F1465F1A23AA94C00055F7C3 /* Sources */,
 				F1465F1B23AA94C00055F7C3 /* Frameworks */,
 				F1465F1C23AA94C00055F7C3 /* Resources */,
-				CAD1ED3BDFB5D39FD57EE18C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -307,28 +297,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3A87E0D479A3EE13C560DF35 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-KaMPKitiOSUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		451A87F626D69EA40013D7F8 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -362,23 +330,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KaMPKitiOS/Pods-KaMPKitiOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CAD1ED3BDFB5D39FD57EE18C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KaMPKitiOSUITests/Pods-KaMPKitiOSUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KaMPKitiOSUITests/Pods-KaMPKitiOSUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KaMPKitiOSUITests/Pods-KaMPKitiOSUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DE3B37D33D11C1968D62DBBA /* [CP] Check Pods Manifest.lock */ = {
@@ -687,7 +638,6 @@
 		};
 		F1465F2E23AA94C00055F7C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3958619F85EEE0B5FF68C282 /* Pods-KaMPKitiOSUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -707,7 +657,6 @@
 		};
 		F1465F2F23AA94C00055F7C3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7836A8E27DBFE941C323F3A0 /* Pods-KaMPKitiOSUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
