@@ -30,7 +30,7 @@ class GetTimestampItemsTest : KoinComponent {
     }
 
     @Test
-    fun `Items are correctly returned`() = runTest {
+    fun `The date is correctly mapped`() = runTest {
         tableQueries.insertItem(1652980264000)
         tableQueries.insertItem(1652980224000)
 

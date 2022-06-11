@@ -36,8 +36,9 @@ class MatchScreenTest : KoinComponent {
             module {
                 single<SqlDriver> {
                     AndroidSqliteDriver(
-                        AppDatabase.Schema,
-                        get(),
+                        schema = AppDatabase.Schema,
+                        context = get(),
+                        name = null,
                     )
                 }
                 single { MockTimestampProvider() }
@@ -72,7 +73,9 @@ class MatchScreenTest : KoinComponent {
         }
     }
 
-    private fun ComposeTestRule.waitUntilCatching(timeoutMillis: Long, assertion: () -> Unit) =
+    private fun ComposeTestRule.waitUntilCatching(
+        timeoutMillis: Long, assertion: () -> Unit
+    ) =
         waitUntil(timeoutMillis) {
             try {
                 assertion()
